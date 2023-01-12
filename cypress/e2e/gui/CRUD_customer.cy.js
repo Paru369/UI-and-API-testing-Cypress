@@ -40,7 +40,7 @@ cy.contains(newName).should('be.visible')
 it('Deletando um cliente', () => {
 
 
-  cy.gui_deleteCustomer('QA')
+  cy.gui_deleteCustomer('Novo QA')
   cy.contains('Sucesso!').should('be.visible')
 })
 })

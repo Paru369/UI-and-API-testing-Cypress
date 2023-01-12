@@ -33,7 +33,7 @@ Cypress.Commands.add('gui_createCustomer', customerData => {
 
 Cypress.Commands.add('gui_readCustomer', name => {
   cy.contains('Pesquisar').type(name)
- 
+
 })
 
 Cypress.Commands.add('gui_updateCustomer', (actualName, newName) => {
@@ -43,7 +43,7 @@ Cypress.Commands.add('gui_updateCustomer', (actualName, newName) => {
   cy.contains('Editar cliente').click()
   cy.get('input[name="contact_name"]').clear().type(newName)
   cy.get('button[class="button button-action pull-right"]').click()
-  
+
 })
 
 Cypress.Commands.add('gui_deleteCustomer', name => {
@@ -52,5 +52,46 @@ Cypress.Commands.add('gui_deleteCustomer', name => {
   cy.contains('Opções').click()
   cy.contains('Excluir cliente').click()
   cy.contains('Confirmar').click()
-  
+
+})
+
+Cypress.Commands.add('gui_createDeal', dealData => {
+  cy.contains('Negócios').click()
+  cy.get('a[class="button button-action pull-right nowrap"]').click()
+  //cy.contains('Pessoa').click()
+
+  cy.get('input[name="deal_title"]').type(dealData.title)
+  cy.get('input[name="deal_amount"]').type(dealData.value)
+  //cy.get('#select-fk-dealcontact-60').type(customerData.email)
+  // cy.get('#select-fk-dealtags-64').type(customerData.name)
+  //cy.get('#select-fk-dealorigin-66').type(customerData.name)
+  cy.get('button[class="button button-action pull-right"]').click()
+  cy.contains('Negócios').click()
+})
+
+
+Cypress.Commands.add('gui_readDeal', name => {
+  cy.contains('Pesquisar').type(name)
+
+})
+
+Cypress.Commands.add('gui_updateDeal', (actualTitle, newTitle) => {
+  cy.contains('Negócios').click()
+  cy.contains(actualTitle).click()
+
+  cy.contains('Opções').click()
+  cy.contains('Editar negócio').click()
+  cy.get('input[name="deal_title"]').clear().type(newTitle)
+  cy.get('button[class="button button-action pull-right"]').click()
+
+})
+
+Cypress.Commands.add('gui_deleteDeal', title => {
+  cy.wait(1000)
+  cy.contains('Negócios').click()
+  cy.contains(title).click()
+  cy.contains('Opções').click()
+  cy.contains('Excluir negócio').click()
+  cy.contains('Confirmar').click()
+
 })

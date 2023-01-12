@@ -15,7 +15,7 @@ CRUD em Negócios (/Deals)
 #### Teste no Front-end: 
 ✅ Login do sistema
 ✅ CRUD em Clientes
-CRUD em Negócios
+✅ CRUD em Negócios
 
 ### 🚀 Diferenciais sugeridos:
 
