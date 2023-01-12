@@ -13,8 +13,8 @@ CRUD em Clientes (/Contacts)
 CRUD em Negócios (/Deals)
 
 #### Teste no Front-end: 
-Login do sistema
-CRUD em Clientes
+✅ Login do sistema
+✅ CRUD em Clientes
 CRUD em Negócios
 
 ### 🚀 Diferenciais sugeridos:
@@ -24,6 +24,7 @@ Testar mais funcionalidades além das especificadas;
 
 ### 🚀 Diferenciais plus:
 
+Logout + assert via URL
 github actions
 dashboard cypress
 slack
@@ -38,7 +39,7 @@ Video explicando o projeto
 
 Configuracoes
 
-Para ativar a gravacao de videos abra o arquivo cypress.config e a altere o `video: false` para `video: true`
+Para ativar a gravacao de videos abra o arquivo ```cypress.config``` e a altere o `video: false` para `video: true`
 
 Configuracao de dados sensiveis cypress.env.json (esse arquivo deveria estar no .gitignore mas para fins didaticos mantive o arquivo exposto)
 
@@ -88,10 +89,15 @@ Framework
 ### ⚙️ Dependencias:
 
 <img align="center" alt="Faker" height="30" width="40" src="https://raw.githubusercontent.com/faker-js/faker/HEAD/docs/public/logo.svg">
-_lib_ [`faker`](https://www.npmjs.com/package/@faker-js/faker) será utilizada para a criação de dados aleatórios para os testes
+
+ _lib_ [`faker`](https://www.npmjs.com/package/@faker-js/faker) será utilizada para a criação de dados aleatórios para os testes
  
 #### Cypress plugin API 
- _lib_ [`cypress-plugin-api`](https://www.npmjs.com/package/cypress-plugin-api) será utilizada para prover feedback visual durante os testes de API.(similar ao Postman)
+ 
+ _lib_ [`cypress-plugin-api`](https://www.npmjs.com/package/cypress-plugin-api) será utilizada para prover feedback visual durante os testes 
+ de API.(similar ao Postman)
+
+
 
 
 ###  🎁 Agradecimentos

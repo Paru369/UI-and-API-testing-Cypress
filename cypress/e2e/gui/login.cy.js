@@ -1,7 +1,7 @@
 describe('Login', () => {
-  it('successfully', () => {
+  it('Logar e confirmar login', () => {
     cy.login()
-    cy.wait(5000)
+    cy.wait(2000)
     cy.contains('Paulo Victor').should('be.visible')
   })
 })
