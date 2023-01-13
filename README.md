@@ -1,6 +1,6 @@
 
 
-![image](https://user-images.githubusercontent.com/99094718/212387032-847cdb0f-fe50-469c-bcee-1b9ba5b1915c.png)
+![image](https://user-images.githubusercontent.com/99094718/212405642-43dfe4e7-3cab-422c-9e7c-a77ff7d17a96.png)
 
 
 
@@ -42,32 +42,32 @@ O projeto tem como pré-requisitos o node 16.15.0 ou superior (escolha maior ver
 <br>
 
 ####  Como instalar:
-<br>
-Na pasta raiz do projeto execute : ``` yarn install```
-<br>
+a pasta raiz do projeto excute:
+
+```yarn install```
+
 
 #### Configuracoes:
 <br>
-Para ativar a gravacao de videos abra o arquivo ```cypress.config``` e a altere o `video: false` para `video: true`
+Para ativar a gravacao de videos abra o arquivo  "cypress.config"  e a altere o `video: false` para `video: true`
 <br>
-Configuracao de dados sensiveis ```cypress.env.json``` (esse arquivo deveria estar no .gitignore mas para fins didaticos mantive o arquivo exposto). Para alterar o usuario ou token de teste, edite o arquivo conforme exemplo abaixo:
-<br>
-```json
-{
+Configuracao de dados sensiveis "cypress.env.json"(esse arquivo deveria estar no .gitignore mas para fins didaticos mantive o arquivo exposto). Para alterar o usuario ou token de teste, edite o arquivo conforme exemplo abaixo:
+
+.json:
+```
+   {
     "user_name": "root",
     "user_password": "password-do-usuario-root-definido-anteriormente",
     "ploomes_access_token": "access-token-criado-anteriormente"
-}
+    }
 ```
-<br><br>
-
-##  🪄 Usage
+##  🪄 Executar
 
 #### Readless:<br>
-Para executar os testes sem visualizar o browser (READLESS)
+Para executar os testes sem visualizar o browser
     <br>
     
-   ``` yarn "cy:run" ``` ou ```npx cypress run --browser <browserName> --spec <localDosTestes> ```
+   ```yarn "cy:run"``` ou ```npx cypress run --browser <browserName> --spec <localDosTestes> ```
    <br>
 
 #### Via Browser:<br>
@@ -82,8 +82,8 @@ GUI - Graphical user interface: Testes no front end
 API - Aplication Programa Interface: Testes via API
 <br>
 
-###  🛠️ Desenvolvido em as tecnologias
-<img align="center" alt="JS" height="50" width="50" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"><img align="center" alt="JS" height="70" width="70" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">
+###  🛠️ Desenvolvido com as tecnologias
+<img align="center" alt="JS" height="40" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">    <img align="center" alt="JS" height="80" width="80" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">
 
 ### ⚙️ Dependencias:
 
@@ -98,9 +98,12 @@ tilizada para prover feedback visual durante os testes de API na execucao dos me
 
 ##  📝 Notas
 
-- O projeto esta rodando e passando em todos os testes. 
-- Por ser um CRUD a sua evolucao natural e completar e validar todos os campos dos formularios, abrangendo o que nao e testado com testes unitarios e de integracao
-- CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados, 
+- O projeto esta rodando com todos os testes passando. 
+- Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não e testado com testes unitarios e de integração.
+- CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados
+- Os seguintes erros foram encontrados na aplicacao e adicionei excessões para que os testes pudessem ser executados:
+ ```'angular is not defined'``` , ```Cannot read properties of undefined'``` , ``` "Unexpected token '<'" ``` 
+ - Nos teste em API o metodo Cypress._.times(1, () => {} pode ser alterardo para criar mais itens, ao final dos testes todos dados sao apagados deixando.
 
 <br><br><br>
 
