@@ -95,6 +95,13 @@ _lib_ [`faker`](https://www.npmjs.com/package/@faker-js/faker) Utilizada para a 
  
 _lib_ [`cypress-plugin-api`](https://www.npmjs.com/package/cypress-plugin-api) U
 tilizada para prover feedback visual durante os testes de API na execucao dos mesmos no browser.(similar ao Postman)
+
+##  📝 Notas
+
+- O projeto esta rodando e passando em todos os testes. 
+- Por ser um CRUD a sua evolucao natural e completar e validar todos os campos dos formularios, abrangendo o que nao e testado com testes unitarios e de integracao
+- CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados, 
+
 <br><br><br>
 
 ###  🎁 Agradecimentos
