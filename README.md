@@ -67,6 +67,7 @@ github actions
 dashboard cypress
 slack
 api email
+feedback visual durante os testes de API
 Video explicando o projeto
 
 

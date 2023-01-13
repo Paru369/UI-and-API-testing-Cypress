@@ -1,12 +1,13 @@
 Cypress.Commands.add('login', (
-  user = Cypress.env('user_name'),
+  email = Cypress.env('user_email'),
   password = Cypress.env('user_password'),
 ) => {
   const login = () => {
 
-    cy.visit('/Login.aspx')
+    cy.visit('/Login')
 
-    cy.get("#Username").type(user)
+   
+    cy.get("#Username").type(email)
     cy.get("#Password").type(password, { log: false })
     cy.get("#Bt_Login").click()
   }

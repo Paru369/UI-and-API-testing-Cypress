@@ -17,8 +17,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
  
 })
 
-
+import 'cypress-plugin-api'
 import './gui_commands'
+import './api_commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
