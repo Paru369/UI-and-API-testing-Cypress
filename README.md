@@ -3,9 +3,9 @@
 <img height="30px" src="https://uploads-ssl.webflow.com/61afa420e611dbd8b4a5856e/62029fbeebcf51ae7cda78a2_logo-horizontal-brand.svg">
 <br>
 
-### 🚀 Features minimas solicitadas implementadas:
+## 🚀 Features minimas solicitadas implementadas:
 <br>
-#### Realizar teste na API do Ploomes nas seguintes entidades:
+### Realizar teste na API do Ploomes nas seguintes entidades:
 <br><br>
 ✅CRUD em Clientes (/Contacts)<br>
 ✅CRUD em Negócios (/Deals)<br>
@@ -16,13 +16,13 @@
 ✅ CRUD em Clientes<br>
 ✅ CRUD em Negócios<br>
 <br><br>
-#### 🚀 Diferenciais sugeridos:
+### 🚀 Diferenciais sugeridos:
 <br><br>
 Testar mais funcionalidades além das especificadas:<br>
 ✅ CRUD na API em Leads<br>
 ✅ Logout no front end<br>
 <br><br>
-#### 🚀 Implementacoes extras: 
+### 🚀 Implementacoes extras: 
 <br><br>
 ✅ feedback visual durante os testes de API (similar ao Postman)<br>
 ✅ Gerador de dados fakes<br>
@@ -33,25 +33,24 @@ para vizualizar o dashboard acesse https://cloud.cypress.io/login com as credenc
 paru369testmail@gmail.com
 123456Paru
 ```
-<br><br>
+<br>
 github actions - testes rodam automaticamente a cada PullRequest
-
 <br><br>
 ##  📦 Install
-<br><br>
+<br>
 O projeto tem como pré-requisitos o node 16.15.0 ou superior (escolha maior versão LTS) - O node contém o npm necessário para instar o yarn. https://nodejs.org/en/download/
 <br>O Yarn não é obrigatório, mas é recomendado. A sua instalação acontece via npm: npm install --global yarn
-<br><br>
+<br>
 ####  Como instalar:
-<br><br>
+<br>
 Na pasta raiz do projeto execute : ``` yarn install```
-<br><br>
+<br>
 #### Configuracoes:
-<br><br>
+<br>
 Para ativar a gravacao de videos abra o arquivo ```cypress.config``` e a altere o `video: false` para `video: true`
 <br>
 Configuracao de dados sensiveis ```cypress.env.json``` (esse arquivo deveria estar no .gitignore mas para fins didaticos mantive o arquivo exposto). Para alterar o usuario ou token de teste, edite o arquivo conforme exemplo abaixo:
-<br><br>
+<br>
 ```json
 {
     "user_name": "root",
@@ -75,9 +74,10 @@ Para executar os testes visualizando o browser
 <br><br>
 Legenda dos Testes:<br>
 <br><br>
-GUI - Graphical user interface 
-API - Aplication Programa Interface
-<br><br><br><br>
+GUI - Graphical user interface: Testes no front end
+ <br>
+API - Aplication Programa Interface: Testes via API
+<br><br><br>
 
 ###  🛠️ Desenvolvido em as tecnologias
 <br><br>
