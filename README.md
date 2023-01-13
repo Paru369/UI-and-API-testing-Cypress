@@ -119,4 +119,4 @@ Obrigado pela oportunidade de responder o desafio.
 <br>
 -----------------------------------------------------
 
-####  ⌨️ com ❤️ por [Paulo Victor](https://gist.github.com/Paru369) 😊
+####  ⌨️ com ❤️ por [Paulo Victor](https://gist.github.com/Paru369) 🔎🐛
