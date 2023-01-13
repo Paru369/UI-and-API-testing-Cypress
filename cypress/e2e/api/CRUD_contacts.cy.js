@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-describe('Create, read, update and delete Contacts', () => {
+describe('Create, Read, Update and Delete Contacts', () => {
 
   const contacData = {
     name: `QA ${faker.name.fullName()}`,
@@ -23,7 +23,7 @@ describe('Create, read, update and delete Contacts', () => {
 
   })
 
-  it('Read and count all contacts in cypress log', () => {
+  it('Read and contact all contacts in cypress log', () => {
 
     cy.api_readAllContacts()
       .then(response => {
@@ -38,11 +38,11 @@ describe('Create, read, update and delete Contacts', () => {
   it('Update a contact', () => {
 
     cy.api_updateContact(contacData)
-    .then(response => {
-      expect(response.status).to.equal(200)
-      cy.log(response.body.value[0].Name, response.body.value[0].Email, )
+      .then(response => {
+        expect(response.status).to.equal(200)
+        cy.log(response.body.value[0].Name, response.body.value[0].Email,)
 
-    })
+      })
   })
 
 

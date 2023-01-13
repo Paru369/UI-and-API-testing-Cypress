@@ -3,15 +3,11 @@ Cypress.Commands.add('login', (
   password = Cypress.env('user_password'),
 ) => {
   const login = () => {
-
     cy.visit('/Login')
-
-   
     cy.get("#Username").type(email)
     cy.get("#Password").type(password, { log: false })
     cy.get("#Bt_Login").click()
   }
-
   login()
 })
 
@@ -30,7 +26,6 @@ Cypress.Commands.add('gui_createCustomer', customerData => {
   cy.get('input[name="contact_email"]').type(customerData.email)
   cy.get('button[class="button button-action pull-right"]').click()
 })
-
 
 Cypress.Commands.add('gui_readCustomer', name => {
   cy.contains('Pesquisar').type(name)
@@ -53,19 +48,13 @@ Cypress.Commands.add('gui_deleteCustomer', name => {
   cy.contains('Opções').click()
   cy.contains('Excluir cliente').click()
   cy.contains('Confirmar').click()
-
 })
 
 Cypress.Commands.add('gui_createDeal', dealData => {
   cy.contains('Negócios').click()
   cy.get('a[class="button button-action pull-right nowrap"]').click()
-  //cy.contains('Pessoa').click()
-
   cy.get('input[name="deal_title"]').type(dealData.title)
   cy.get('input[name="deal_amount"]').type(dealData.value)
-  //cy.get('#select-fk-dealcontact-60').type(customerData.email)
-  // cy.get('#select-fk-dealtags-64').type(customerData.name)
-  //cy.get('#select-fk-dealorigin-66').type(customerData.name)
   cy.get('button[class="button button-action pull-right"]').click()
   cy.contains('Negócios').click()
 })
@@ -73,7 +62,6 @@ Cypress.Commands.add('gui_createDeal', dealData => {
 
 Cypress.Commands.add('gui_readDeal', name => {
   cy.contains('Pesquisar').type(name)
-
 })
 
 Cypress.Commands.add('gui_updateDeal', (actualTitle, newTitle) => {
@@ -84,7 +72,6 @@ Cypress.Commands.add('gui_updateDeal', (actualTitle, newTitle) => {
   cy.contains('Editar negócio').click()
   cy.get('input[name="deal_title"]').clear().type(newTitle)
   cy.get('button[class="button button-action pull-right"]').click()
-
 })
 
 Cypress.Commands.add('gui_deleteDeal', title => {
@@ -94,5 +81,4 @@ Cypress.Commands.add('gui_deleteDeal', title => {
   cy.contains('Opções').click()
   cy.contains('Excluir negócio').click()
   cy.contains('Confirmar').click()
-
 })
