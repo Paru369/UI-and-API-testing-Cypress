@@ -100,8 +100,9 @@ tilizada para prover feedback visual durante os testes de API na execucao dos me
 
 - O projeto esta rodando com todos os testes passando. 
 - Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não e testado com testes unitarios e de integração.
+- Outras validações para evoluir o projeto: Envio de arquivos, envio de imagens, download de arquivos
 - CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados
-- Os seguintes erros foram encontrados na aplicacao e adicionei excessões para que os testes pudessem ser executados:
+- Os seguintes erros abaixo foram encontrados na aplicação, adicionei excessões para que os testes pudessem ser executados sem quebras:
  ```'angular is not defined'``` , ```Cannot read properties of undefined'``` , ``` "Unexpected token '<'" ``` 
  - Nos teste em API o metodo Cypress._.times(1, () => {} pode ser alterardo para criar mais itens, ao final dos testes todos dados sao apagados deixando.
 
