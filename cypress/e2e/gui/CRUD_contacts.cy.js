@@ -27,7 +27,7 @@ describe('Create, Read, Update and Delete Contacts', () => {
   it('Update a contact', () => {
 
     const updatedContact = Data.contactData()
-    cy.gui_updateCustomer(contacData.name, updatedContact.name)
+    cy.gui_updateCustomer(contacData.name, `Novo ${updatedContact.name}`)
     cy.contains(updatedContact.name).should('be.visible')
 
   })
