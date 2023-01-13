@@ -54,7 +54,7 @@ Cypress.Commands.add('gui_createDeal', dealData => {
   cy.contains('Negócios').click()
   cy.get('a[class="button button-action pull-right nowrap"]').click()
   cy.get('input[name="deal_title"]').type(dealData.title)
-  cy.get('input[name="deal_amount"]').type(dealData.value)
+  cy.get('input[name="deal_amount"]').type(dealData.amount)
   cy.get('button[class="button button-action pull-right"]').click()
   cy.contains('Negócios').click()
 })

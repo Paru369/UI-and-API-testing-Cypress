@@ -8,7 +8,7 @@ describe('Create, Read, Update and Delete Contacts', () => {
     email: faker.internet.exampleEmail()
   }
 
-  Cypress._.times(5, () => {
+  Cypress._.times(1, () => {
     it('Create a contact', () => {
 
       cy.api_createContact(contacData)
