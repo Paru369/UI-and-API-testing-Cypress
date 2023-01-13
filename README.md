@@ -76,9 +76,9 @@ Para executar os testes visualizando o browser
 
 ``` yarn "cy:open"  ``` ou  ```npx cypress open ```
 <br>
+
 Legenda dos Testes:<br>
 GUI - Graphical user interface: Testes no front end
-
 API - Aplication Programa Interface: Testes via API
 <br>
 
@@ -96,7 +96,7 @@ _lib_ [`faker`](https://www.npmjs.com/package/@faker-js/faker) Utilizada para a 
 _lib_ [`cypress-plugin-api`](https://www.npmjs.com/package/cypress-plugin-api) U
 tilizada para prover feedback visual durante os testes de API na execucao dos mesmos no browser.(similar ao Postman)
 
-##  📝 Notas
+##  📝 Notas do autor
 
 - O projeto esta rodando com todos os testes passando, há um video da execução no diretorio 'VIdeo Tests Running'
 - Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não é testado com testes unitários e de integração.
@@ -111,7 +111,7 @@ tilizada para prover feedback visual durante os testes de API na execucao dos me
 ###  🎁 Agradecimentos
 <br>
 
-Obrigado pela oportunidade de responder o desafio.
+Obrigado pela oportunidade de responder ao teste, e especialmente o Vinicius pela entrevista humanizada e leve.
 
 <br>
 
