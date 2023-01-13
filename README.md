@@ -16,24 +16,23 @@ CRUD em Clientes (/Contacts)
 
 #### 🚀 Diferenciais sugeridos:
 
-Teste no Mobile também;
-Testar mais funcionalidades além das especificadas;
+Testar mais funcionalidades além das especificadas:
+✅ CRUD na API em Leads
+✅ Logout no front end
 
 #### 🚀 Implementacoes extras: 
 
-Testes: 
-Logout no front end
-CRUD no front end em Documentos
-CRUD na API em produtos
-CURD na API em Leads
 
-Funcionalidades:
-feedback visual durante os testes de API
+✅ feedback visual durante os testes de API (similar ao Postman)
+✅ Gerador de dados fakes
+✅dashboard cypress:
+ Visualizacao grafica da execucao dos testes
+para vizualizar o dashboard acesse https://cloud.cypress.io/login com as credenciais:
+
+paru369testmail@gmail.com
+123456Paru
+
 github actions - testes rodam automaticamente a cada PullRequest
-dashboard cypress - Visualizacao grafica da execucao dos testes
-slack
-api email
-
 
 
 ##  📦 Install
@@ -42,12 +41,12 @@ O projeto tem como pré-requisitos o node 16.15.0 ou superior (escolha maior ver
 
 O Yarn não é obrigatório, mas é recomendado. A sua instalação acontece via npm: npm install --global yarn
 
-Como instalar:
+####  Como instalar:
 
 Na pasta raiz do projeto execute 
 ``` yarn install```
 
-Configuracoes:
+#### Configuracoes:
 
 Para ativar a gravacao de videos abra o arquivo ```cypress.config``` e a altere o `video: false` para `video: true`
 
@@ -64,20 +63,16 @@ Configuracao de dados sensiveis ```cypress.env.json``` (esse arquivo deveria est
 
 ##  🪄 Usage
 
-## Readless:
+### Readless:
 Para executar os testes sem visualizar o browser (READLESS)
-npx cypress run --browser <browserName> --spec <localDosTestes> 
+    
+   ``` yarn "cy:run" ``` ou ```npx cypress run --browser <browserName> --spec <localDosTestes> ```
+   
 
-Para executar apenas os testes de API: 
-Para executar apenas os testes de FrontEnd: 
-
-## Via Browser:
+### Via Browser:
 Para executar os testes visualizando o browser
-npx cypress open  
 
-Para executar apenas os testes de API: 
-Para executar apenas os testes de FrontEnd: 
-
+``` yarn "cy:open"  ``` ou  ```npx cypress open ```
 
 Legenda dos Testes:
 
@@ -89,7 +84,6 @@ API - Aplication Programa Interface
 
 Linguagens
 <img align="center" alt="JS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">
-<img align="center" alt="JS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/typescript.svg">
 
 Framework
 <img align="center" alt="JS" height="30" width="40" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">

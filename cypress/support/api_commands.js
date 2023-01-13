@@ -118,7 +118,61 @@ Cypress.Commands.add('api_deleteAllDeals', () => {
   )
 })
 
+Cypress.Commands.add('api_createLead', lead => {
+  cy.request({
+    method: 'POST',
+    url: `https://api2.ploomes.com/Leads`,
+    body: {
+      "CompanyName": lead.companyName,
+      "PersonName": lead.personName,
+      "Origin": lead.origin
+    },
+    headers: { 'user-key': accessToken },
+  })
+})
 
+Cypress.Commands.add('api_readAllLeads', () => {
+  cy.request({
+    method: 'GET',
+    url: `https://api2.ploomes.com/Leads`,
+    headers: { 'user-key': accessToken },
+  })
+
+})
+
+Cypress.Commands.add('api_updateLead', news => {
+  cy.api_readAllLeads().then(res => {
+    cy.request({
+      method: 'PATCH',
+      url: `https://api2.ploomes.com/Leads(${res.body.value[0].Id})`,
+      body: {
+        "CompanyName": `Update Name ${news.companyName}`,
+        "PersonName": `New-Email-${news.personName}`
+      },
+      headers: { 'user-key': accessToken },
+    })
+  })
+})
+
+Cypress.Commands.add('api_deleteOneLead', () => {
+  cy.api_readAllLeads().then(res => {
+    cy.request({
+      method: 'DELETE',
+      url: `https://api2.ploomes.com/Leads(${res.body.value[0].Id})`,
+      headers: { 'user-key': accessToken }
+    })
+  })
+})
+
+Cypress.Commands.add('api_deleteAllLeads', () => {
+  cy.api_readAllLeads().then(res =>
+    res.body.value.forEach(lead => cy.request({
+      method: 'DELETE',
+      url: `https://api2.ploomes.com/Leads(${lead.Id})`,
+      headers: { 'user-key': accessToken },
+    }))
+  )
+})
 
 
 

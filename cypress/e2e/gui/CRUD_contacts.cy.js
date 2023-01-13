@@ -1,38 +1,34 @@
-import { faker } from '@faker-js/faker'
+import { ContactDataFaker } from "../helpers/data/contact/contactFaker"
+
+const Data =  new ContactDataFaker
+const contacData = Data.contactData()
+
 
 describe('Create, Read, Update and Delete Contacts', () => {
   beforeEach(() => {
     cy.login()
   })
 
-  const customerData = {
-    name: `QA ${faker.name.fullName()}`,
-    employ: faker.commerce.productName(),
-    phone: `119${faker.random.numeric(8)}`,
-    email: faker.internet.exampleEmail(),
-    position: `cargo ${faker.commerce.productAdjective()}`,
-    department: `departamento -${faker.commerce.department()}`,
-  }
 
   it('Create a contact', () => {
 
-    cy.gui_createCustomer(customerData)
-    cy.contains(customerData.name).should('be.visible')
+    cy.gui_createCustomer(contacData)
+    cy.contains(contacData.name).should('be.visible')
   })
 
 
   it('Read and contact ', () => {
 
-    cy.gui_readCustomer(customerData.name)
-    cy.contains(customerData.name).should('be.visible')
+    cy.gui_readCustomer(contacData.name)
+    cy.contains(contacData.name).should('be.visible')
 
   })
 
   it('Update a contact', () => {
 
-    const newName = `Novo QA ${faker.name.firstName()}`
-    cy.gui_updateCustomer(customerData.name, newName)
-    cy.contains(newName).should('be.visible')
+    const updatedContact = Data.contactData()
+    cy.gui_updateCustomer(contacData.name, updatedContact.name)
+    cy.contains(updatedContact.name).should('be.visible')
 
   })
 

@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-export class ContactData {
+export class ContactDataFaker {
     
    contactData(){
     const contacData = {

@@ -1,12 +1,12 @@
-import { faker } from '@faker-js/faker'
+import { ContactDataFaker } from "../helpers/data/contact/contactFaker"
+
+const Data =  new ContactDataFaker
+const contacData = Data.contactData()
+
 
 describe('Create, Read, Update and Delete Contacts', () => {
 
-  const contacData = {
-    name: `QA ${faker.name.fullName()}`,
-    phone: `119${faker.random.numeric(8)}`,
-    email: faker.internet.exampleEmail()
-  }
+
 
   Cypress._.times(1, () => {
     it('Create a contact', () => {
@@ -37,7 +37,9 @@ describe('Create, Read, Update and Delete Contacts', () => {
 
   it('Update a contact', () => {
 
-    cy.api_updateContact(contacData)
+    const updatedContact = Data.contactData()
+
+    cy.api_updateContact(updatedContact)
       .then(response => {
         expect(response.status).to.equal(200)
         cy.log(response.body.value[0].Name, response.body.value[0].Email,)
