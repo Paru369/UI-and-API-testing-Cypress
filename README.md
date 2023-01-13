@@ -4,7 +4,7 @@
 
 
 
-## 📌 Features minimas solicitadas implementadas:
+## 📌 Features mínimas solicitadas implementadas:
 
 #### Realizar teste na API do Ploomes nas seguintes entidades:
 ✅CRUD em Clientes (/Contacts)<br>
@@ -16,13 +16,13 @@
 ✅ CRUD em Negócios<br>
 <br>
 
-### 📌 Diferenciais sugeridos:
+### 📌 Diferenciais sugeridos  implementados:
 Testar mais funcionalidades além das especificadas:<br>
 ✅ CRUD na API em Leads<br>
 ✅ Logout no front end<br>
 <br>
 
-### 📌 Implementacoes extras: 
+### 📌 Implementações extras: 
 ✅ Feedback visual durante os testes de API (similar ao Postman)<br>
 ✅ Gerador de dados fakes<br>
 ✅ GitHub Actions - testes rodam automaticamente a cada PullRequest<br>
