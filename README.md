@@ -98,8 +98,8 @@ tilizada para prover feedback visual durante os testes de API na execucao dos me
 
 ##  📝 Notas
 
-- O projeto esta rodando com todos os testes passando. 
-- Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não e testado com testes unitarios e de integração.
+- O projeto esta rodando com todos os testes passando, há um video da execução no diretorio 'VIdeo Tests Running'
+- Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não é testado com testes unitários e de integração.
 - Outras validações para evoluir o projeto: Envio de arquivos, envio de imagens, download de arquivos
 - CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados
 - Os seguintes erros abaixo foram encontrados na aplicação, adicionei excessões para que os testes pudessem ser executados sem quebras:
