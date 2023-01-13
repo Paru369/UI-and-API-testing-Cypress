@@ -8,7 +8,7 @@
 #### Realizar teste na API do Ploomes nas seguintes entidades:
 <br><br>
 ✅CRUD em Clientes (/Contacts)<br>
-✅CRUD em Negócios (/Deals)
+✅CRUD em Negócios (/Deals)<br>
 <br><br>
 #### Teste no Front-end: 
 <br><br>
@@ -81,11 +81,11 @@ API - Aplication Programa Interface
 
 ###  🛠️ Desenvolvido em as tecnologias
 <br><br>
-Linguagens<br>
-<img align="center" alt="JS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">
+<br>
+<img align="center" alt="JS" height="40" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">
 <br><br>
-Framework<br>
-<img align="center" alt="JS" height="30" width="40" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">
+<br>
+<img align="center" alt="JS" height="60" width="40" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">
 <br><br>
 
 ### ⚙️ Dependencias:
@@ -109,7 +109,7 @@ Obrigado pela oportunidade de responder o desafio.
 
 <br><br><br>
 
-[documentação oficial](https://docs.cypress.io) 
+###[documentação oficial](https://docs.cypress.io) : https://docs.cypress.io
 
 <br>
 ---
