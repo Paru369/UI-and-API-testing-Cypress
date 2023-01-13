@@ -1,5 +1,5 @@
 {
-  "name": "ploomes",
+  "name": "QA Developer Test ploomes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "cy:open" : "npx cypress open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Paulo Victor G. Pinheiro - paruvitu@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
