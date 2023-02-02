@@ -1,25 +1,21 @@
 
 
-![image](https://user-images.githubusercontent.com/99094718/212405642-43dfe4e7-3cab-422c-9e7c-a77ff7d17a96.png)
 
+## 📌 Features  implementadas:
 
-
-## 📌 Features mínimas solicitadas implementadas:
-
-#### Realizar teste na API do Ploomes nas seguintes entidades:
+#### Teste na API :
 ✅CRUD em Clientes (/Contacts)<br>
 ✅CRUD em Negócios (/Deals)<br>
+✅ CRUD na API em Leads<br>
 
 #### Teste no Front-end: 
 ✅ Login do sistema<br>
 ✅ CRUD em Clientes<br>
 ✅ CRUD em Negócios<br>
+✅ Logout no front end<br>
 <br>
 
-### 📌 Diferenciais sugeridos  implementados:
-Testar mais funcionalidades além das especificadas:<br>
-✅ CRUD na API em Leads<br>
-✅ Logout no front end<br>
+
 <br>
 
 ### 📌 Implementações extras: 
@@ -111,7 +107,7 @@ tilizada para prover feedback visual durante os testes de API na execucao dos me
 ###  🎁 Agradecimentos
 <br>
 
-Obrigado pela oportunidade de responder ao teste, e especialmente o Vinicius pela entrevista humanizada e leve.
+Obrigado a meus gatos que me ajudaram a codar.
 
 <br>
 
