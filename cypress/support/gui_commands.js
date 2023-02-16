@@ -8,20 +8,15 @@ Cypress.Commands.add('login', (
   cy.get("#Bt_Login").click()
 })
 
-Cypress.Commands.add('logout', () => {
-  cy.get('#leftRenderImage').click()
-  cy.contains('Sair').click()
-})
-
-Cypress.Commands.add('gui_createCustomer', customerData => {
-  cy.contains('Clientes').click()
+Cypress.Commands.add('gui_createCustomer', ({ name, phone, email }) => {
+  cy.contains('button', 'Clientes', { timeout: 10000 }).click()
   cy.get('#filter-list').click()
-  cy.contains('Pessoa').click()
+  cy.contains('a', 'Pessoa').click()
 
-  cy.get('input[name="contact_name"]').type(customerData.name)
-  cy.get('input[name="contact_phones"]').type(customerData.phone)
-  cy.get('input[name="contact_email"]').type(customerData.email)
-  cy.get('button[class="button button-action pull-right"]').click()
+  cy.get('input[name="contact_name"]').type(name)
+  cy.get('input[name="contact_phones"]').type(phone)
+  cy.get('input[name="contact_email"]').type(email)
+  cy.contains('button', 'Salvar').click()
 })
 
 Cypress.Commands.add('gui_readCustomer', name => {
