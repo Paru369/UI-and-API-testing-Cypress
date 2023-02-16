@@ -8,9 +8,7 @@ module.exports = defineConfig({
       hideCredentials: true,
       requestMode: true,
     },
-   
   },
   fixturesFolder: false,
   video: false,
-  projectId: "68gbhp"
 })
