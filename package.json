@@ -2,7 +2,7 @@
   "name": "qa-developer-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "cypress.config.js",
   "scripts": {
     "cy:run:rec" : "npx cypress run --record --key a013ae6c-5cf4-49b6-ad7e-b6fbdebd97ed",
     "cy:run" : "npx cypress run",
