@@ -1,43 +1,23 @@
-import { ContactDataFaker } from "../helpers/data/contact/contactFaker"
+import { fakeContact } from '../../support/fakeContact'
 
-const Data =  new ContactDataFaker
-const contacData = Data.contactData()
+describe('CRUD Contacts', () => {
+  beforeEach(() => cy.login())
 
+  it('CRUD a contact', () => {
+    const contactSelector = 'new-contact-page-side-menu div'
 
-describe('Create, Read, Update and Delete Contacts', () => {
-  beforeEach(() => {
-    cy.login()
-  })
+    cy.gui_createCustomer(fakeContact)
+    cy.contains(contactSelector, fakeContact.name)
+      .should('be.visible')
 
+    cy.gui_readCustomer(fakeContact)
 
-  it('Create a contact', () => {
+    const updatedContactName = `Atualizado ${fakeContact.name}`
+    cy.gui_updateCustomer(updatedContactName)
+    cy.contains(contactSelector, updatedContactName)
+      .should('be.visible')
 
-    cy.gui_createCustomer(contacData)
-    cy.contains(contacData.name).should('be.visible')
-  })
-
-
-  it('Read and contact ', () => {
-
-    cy.gui_readCustomer(contacData.name)
-    cy.contains(contacData.name).should('be.visible')
-
-  })
-
-  it('Update a contact', () => {
-
-    const updatedContact = Data.contactData()
-    cy.gui_updateCustomer(contacData.name, `Novo ${updatedContact.name}`)
-    cy.contains(updatedContact.name).should('be.visible')
-
-  })
-
-
-  it('Delete one contact', () => {
-
-
-    cy.gui_deleteCustomer('Novo QA')
-    cy.contains('Sucesso!').should('be.visible')
+    cy.gui_deleteCustomer(updatedContactName)
+    cy.contains('.toast-success', 'Sucesso!').should('be.visible')
   })
 })
-
