@@ -12,8 +12,9 @@
   "author": "Paulo Victor G. Pinheiro - paruvitu@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "cypress": "^12.3.0",
-    "cypress-plugin-api": "^2.6.1"
+    "cypress": "^12.5.1",
+    "cypress-plugin-api": "^2.10.3",
+    "cypress-plugin-xhr-toggle": "^0.2.0",
+    "faker-br": "^0.4.1"
   }
 }
