@@ -3,4 +3,4 @@ cypress/downloads/
 cypress/screenshots/
 cypress/videos/
 node_modules/
-
+yarn-error.log
