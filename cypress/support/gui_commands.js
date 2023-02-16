@@ -2,13 +2,10 @@ Cypress.Commands.add('login', (
   email = Cypress.env('user_email'),
   password = Cypress.env('user_password'),
 ) => {
-  const login = () => {
-    cy.visit('/Login')
-    cy.get("#Username").type(email)
-    cy.get("#Password").type(password, { log: false })
-    cy.get("#Bt_Login").click()
-  }
-  login()
+  cy.visit('/Login')
+  cy.get("#Username").type(email)
+  cy.get("#Password").type(password, { log: false })
+  cy.get("#Bt_Login").click()
 })
 
 Cypress.Commands.add('logout', () => {
