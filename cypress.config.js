@@ -6,6 +6,9 @@ module.exports = defineConfig({
     experimentalRunAllSpecs: true,
     env: {
       hideCredentials: true,
+      hideCredentialsOptions: {
+        headers: ['user-key'],
+      },
       requestMode: true,
     },
   },
