@@ -1,8 +1,5 @@
 describe('Logout', () => {
-  beforeEach(() => {
-    cy.login()
-    cy.visit('/')
-  })
+  beforeEach(() => cy.login())
 
   it('Sucesso ao deslogar', () => {
     cy.logout()
