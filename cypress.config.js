@@ -10,6 +10,7 @@ module.exports = defineConfig({
         headers: ['user-key'],
       },
       requestMode: true,
+      apiUrl: 'https://api2.ploomes.com',
     },
   },
   fixturesFolder: false,
