@@ -34,8 +34,15 @@ describe('CRUD Contacts', () => {
           fakeContact.name = `Update Name ${fakeContact.name}`
           fakeContact.email = `New-Email-${fakeContact.email}`
           cy.api_updateContact(fakeContact)
+            .as('updatedContact')
             .its('status')
             .should('be.equal', 200)
+          cy.get('@updatedContact')
+            .its('body.value[0].Name')
+            .should('be.equal', fakeContact.name)
+          cy.get('@updatedContact')
+            .its('body.value[0].Email')
+            .should('be.equal', fakeContact.email)
         })
     })
 
