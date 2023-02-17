@@ -17,7 +17,7 @@ describe('CRUD Contacts', () => {
     cy.contains(contactSelector, updatedContactName)
       .should('be.visible')
 
-    cy.gui_deleteCustomer(updatedContactName)
+    cy.gui_deleteCustomer()
     cy.contains('.toast-success', 'Sucesso!').should('be.visible')
   })
 })
