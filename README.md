@@ -1,119 +1,74 @@
+# 📌 Features  implementadas
 
+## Teste na API
 
+- ✅ CRUD de Clientes (`/Contacts`)
 
-## 📌 Features  implementadas:
+## Teste no Front-end
 
-#### Teste na API :
-✅CRUD em Clientes (/Contacts)<br>
-✅CRUD em Negócios (/Deals)<br>
-✅ CRUD na API em Leads<br>
+- ✅ Login
+- ✅ Logout
+- ✅ CRUD de Clientes
 
-#### Teste no Front-end: 
-✅ Login do sistema<br>
-✅ CRUD em Clientes<br>
-✅ CRUD em Negócios<br>
-✅ Logout no front end<br>
-<br>
+## 📌 Implementações extras
 
+- ✅ Feedback visual durante os testes de API (similar ao Postman)
+- ✅ Gerador de dados falsos com o uso da biblioteca [`faker-br`](https://www.npmjs.com/package/faker-br)
 
-<br>
+## 🗒️ Pré-requisitos
 
-### 📌 Implementações extras: 
-✅ Feedback visual durante os testes de API (similar ao Postman)<br>
-✅ Gerador de dados fakes<br>
-✅ GitHub Actions - testes rodam automaticamente a cada PullRequest<br>
-✅ Cypress Cloud: <br> dashboard para toda equipe acompanhar os testes
- Visualizacao grafica da execucao dos testes
-para vizualizar o dashboard acesse https://cloud.cypress.io/login com as credenciais:
-```
-paru369testmail@gmail.com
-123456Paru
-```
-<br>
+O projeto tem como pré-requisitos o [Node.js](https://nodejs.org/en/download/) 16.15.0 ou superior (escolha maior versão LTS).
 
-##  📦 Install
+Ao instalar o Node.js o `npm` já vem instalado, o qual é necessário para instalar o `yarn`.
 
-O projeto tem como pré-requisitos o node 16.15.0 ou superior (escolha maior versão LTS) - O node contém o npm necessário para instar o yarn. https://nodejs.org/en/download/
-<br>O Yarn não é obrigatório, mas é recomendado. A sua instalação acontece via npm: npm install --global yarn
-<br>
+Para instalar o `yarn`, utilize o seguinte comando: `npm install --global yarn`
 
-####  Como instalar:
-a pasta raiz do projeto excute:
+## 📦 Instalação das dependências
 
-```yarn install```
+Na raiz do projeto, excute `yarn install`.
 
+## Configurações
 
-#### Configuracoes:
-<br>
-Para ativar a gravacao de videos abra o arquivo  "cypress.config"  e a altere o `video: false` para `video: true`
-<br>
-Configuracao de dados sensiveis "cypress.env.json"(esse arquivo deveria estar no .gitignore mas para fins didaticos mantive o arquivo exposto). Para alterar o usuario ou token de teste, edite o arquivo conforme exemplo abaixo:
+Para ativar a gravação de vídeos, abra o arquivo  [`cypress.config.js`](./cypress.config.js) e altere a propriedade `video: false` para `video: true`.
 
-.json:
-```
-   {
-    "user_name": "root",
-    "user_password": "password-do-usuario-root-definido-anteriormente",
-    "ploomes_access_token": "access-token-criado-anteriormente"
-    }
-```
-##  🪄 Executar
+Para rodar os testes, faça uma cópia do arquivo [`cypress.env.example.json`](./cypress.env.example.json) como `cypress.env.json` e atualize os dados de acordo (com usuário, senha e chave válidas).
 
-#### Readless:<br>
-Para executar os testes sem visualizar o browser
-    <br>
-    
-   ```yarn "cy:run"``` ou ```npx cypress run --browser <browserName> --spec <localDosTestes> ```
-   <br>
+## 🪄 Testes
 
-#### Via Browser:<br>
-Para executar os testes visualizando o browser
-<br>
+O framework de tests [Cypress](https://cypress.io) foi utilizado para a escrita e execução dos testes automatizados.
 
-``` yarn "cy:open"  ``` ou  ```npx cypress open ```
-<br>
+### Modo _headless_
 
-Legenda dos Testes:<br>
-GUI - Graphical user interface: Testes no front end
-API - Aplication Programa Interface: Testes via API
-<br>
+Para executar os testes sem visualizar o navegador, execute o comando `yarn cy:run`.
 
-###  🛠️ Desenvolvido com as tecnologias
-<img align="center" alt="JS" height="40" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">    <img align="center" alt="JS" height="80" width="80" src="https://www.cypress.io/images/layouts/shared/navbar-brand.svg">
+### Modo _Headed_
 
-### ⚙️ Dependencias:
+Para executar os testes visualizando o navegador, execute o comando `yarn cy:open`.
 
-#### Faker-js  <img align="center" alt="Faker" height="30" width="40" src="https://raw.githubusercontent.com/faker-js/faker/HEAD/docs/public/logo.svg">
-_lib_ [`faker`](https://www.npmjs.com/package/@faker-js/faker) Utilizada para a criação de dados aleatórios para os testes trazendo agilidade a criacao dos testes e um grande repertorio de valores.
- A lib esta acoplada ao test atraves de uma interface em typrescript e caso necessite ser substituida a troca nao tera grandes impactos aos testes.
+### Legenda dos Testes
 
-#### Cypress plugin API 
- 
-_lib_ [`cypress-plugin-api`](https://www.npmjs.com/package/cypress-plugin-api) U
-tilizada para prover feedback visual durante os testes de API na execucao dos mesmos no browser.(similar ao Postman)
+- GUI - _Graphical User Interface_ (Testes no _front-end_)
+- API - _Application Programmimg Interface_
 
-##  📝 Notas do autor
+### ⚙️ Dependencias de desenvolvimento
 
-- O projeto esta rodando com todos os testes passando, há um video da execução no diretorio 'VIdeo Tests Running'
+Consulte a seção de `devDependencies` do arquivo [`package.josn`](./package.json) para lista de dependências de desenvolvimento.
+
+## 📝 Notas do autor
+
+- O projeto está rodando com todos os testes passando
 - Por ser um CRUD, a sua evolucao natural é completar e validar todos os campos dos formularios, abrangendo o que não é testado com testes unitários e de integração.
 - Outras validações para evoluir o projeto: Envio de arquivos, envio de imagens, download de arquivos
-- CI/CD: O projeto esta com workflow no github action, a cada PR os testes sao executados
-- Os seguintes erros abaixo foram encontrados na aplicação, adicionei excessões para que os testes pudessem ser executados sem quebras:
- ```'angular is not defined'``` , ```Cannot read properties of undefined'``` , ``` "Unexpected token '<'" ``` 
- - Nos teste em API o metodo Cypress._.times(1, () => {} pode ser alterardo para criar mais itens, ao final dos testes todos dados sao apagados deixando.
+- Os erros abaixo foram encontrados na aplicação, para os quais adicionei excessões para que os testes pudessem ser executados sem quebras:
 
-<br><br><br>
+- `'angular is not defined'`
+- `'Cannot read properties of undefined'`
+- ` "Unexpected token '<'" `
 
-###  🎁 Agradecimentos
-<br>
+### 🎁 Agradecimentos
 
 Obrigado a meus gatos que me ajudaram a codar.
 
-<br>
+___
 
-### [documentação oficial](https://docs.cypress.io) : https://docs.cypress.io
-
-<br>
------------------------------------------------------
-
-####  ⌨️ com ❤️ por [Paulo Victor](https://gist.github.com/Paru369) 🔎🐛
+⌨️ com ❤️ por [Paulo Victor](https://gist.github.com/Paru369) 🔎 🐛
