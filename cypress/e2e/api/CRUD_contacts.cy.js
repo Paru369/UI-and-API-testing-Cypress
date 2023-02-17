@@ -16,10 +16,15 @@ describe('CRUD Contacts', () => {
         .as('contact')
     })
 
-    it('Read all contacts', () => {
-      cy.api_readAllContacts()
+    it('Read all contacts and check the existance of at least one ', () => {
+      cy.api_readContacts()
+        .as('readContact')
         .its('status')
         .should('be.equal', 200)
+      cy.get('@readContact')
+        .its('body.value')
+        .its('length')
+        .should('be.at.least', 1)
     })
 
     it('Update a contact', () => {

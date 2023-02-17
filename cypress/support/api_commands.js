@@ -20,7 +20,7 @@ Cypress.Commands.add('api_createContact', ({ name, email, phone}) => {
   })
 })
 
-Cypress.Commands.add('api_readAllContacts', () => {
+Cypress.Commands.add('api_readContacts', () => {
   cy.request({
     method: 'GET',
     url: contactsApiUrl,
@@ -49,7 +49,7 @@ Cypress.Commands.add('api_deleteContact', contactId => {
 })
 
 Cypress.Commands.add('api_deleteAllContacts', () => {
-  cy.api_readAllContacts().then(res =>
+  cy.api_readContacts().then(res =>
     res.body.value.forEach(contact => cy.request({
       method: 'DELETE',
       url: `${contactsApiUrl}(${contact.Id})`,
