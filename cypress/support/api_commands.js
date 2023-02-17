@@ -26,7 +26,6 @@ Cypress.Commands.add('api_readAllContacts', () => {
     url: contactsApiUrl,
     headers: { 'user-key': accessToken },
   })
-
 })
 
 Cypress.Commands.add('api_updateContact', ({ id, name, email }) => {
