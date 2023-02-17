@@ -41,12 +41,10 @@ Cypress.Commands.add('api_updateContact', ({ id, name, email }) => {
 })
 
 Cypress.Commands.add('api_deleteContact', contactId => {
-  cy.api_readAllContacts().then(res => {
-    cy.request({
-      method: 'DELETE',
-      url: `${contactsApiUrl}(${contactId})`,
-      headers: { 'user-key': accessToken }
-    })
+  cy.request({
+    method: 'DELETE',
+    url: `${contactsApiUrl}(${contactId})`,
+    headers: { 'user-key': accessToken }
   })
 })
 
