@@ -33,8 +33,8 @@ Cypress.Commands.add('api_updateContact', ({ id, name, email }) => {
     method: 'PATCH',
     url: `${contactsApiUrl}(${id})`,
     body: {
-      Name: `Update Name ${name}`,
-      Email: `New-Email-${email}`,
+      Name: name,
+      Email: email,
     },
     headers: { 'user-key': accessToken },
   })

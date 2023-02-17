@@ -26,6 +26,8 @@ describe('CRUD Contacts', () => {
       cy.get('@contact').its('body.value[0].Id')
         .then(contactId => {
           fakeContact.id = contactId
+          fakeContact.name = `Update Name ${fakeContact.name}`
+          fakeContact.email = `New-Email-${fakeContact.email}`
           cy.api_updateContact(fakeContact)
             .its('status')
             .should('be.equal', 200)
