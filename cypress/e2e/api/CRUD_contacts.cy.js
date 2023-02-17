@@ -16,7 +16,7 @@ describe('CRUD Contacts', () => {
         .as('contact')
     })
 
-    it('Read a contact', () => {
+    it('Read all contacts', () => {
       cy.api_readAllContacts()
         .its('status')
         .should('be.equal', 200)
