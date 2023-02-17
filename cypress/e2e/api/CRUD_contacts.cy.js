@@ -23,9 +23,13 @@ describe('CRUD Contacts', () => {
     })
 
     it('Update a contact', () => {
-      cy.api_updateContact(fakeContact)
-        .its('status')
-        .should('be.equal', 200)
+      cy.get('@contact').its('body.value[0].Id')
+        .then(contactId => {
+          fakeContact.id = contactId
+          cy.api_updateContact(fakeContact)
+            .its('status')
+            .should('be.equal', 200)
+        })
     })
 
     it('Delete a contact', () => {

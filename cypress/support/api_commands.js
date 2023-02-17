@@ -29,17 +29,15 @@ Cypress.Commands.add('api_readAllContacts', () => {
 
 })
 
-Cypress.Commands.add('api_updateContact', ({ name, email }) => {
-  cy.api_readAllContacts().then(res => {
-    cy.request({
-      method: 'PATCH',
-      url: `${contactsApiUrl}(${res.body.value[0].Id})`,
-      body: {
-        Name: `Update Name ${name}`,
-        Email: `New-Email-${email}`,
-      },
-      headers: { 'user-key': accessToken },
-    })
+Cypress.Commands.add('api_updateContact', ({ id, name, email }) => {
+  cy.request({
+    method: 'PATCH',
+    url: `${contactsApiUrl}(${id})`,
+    body: {
+      Name: `Update Name ${name}`,
+      Email: `New-Email-${email}`,
+    },
+    headers: { 'user-key': accessToken },
   })
 })
 
