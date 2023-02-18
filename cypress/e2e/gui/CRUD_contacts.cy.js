@@ -4,17 +4,15 @@ describe('CRUD Contacts', () => {
   beforeEach(() => cy.login())
 
   it('CRUD a contact', () => {
-    const contactSelector = 'new-contact-page-side-menu div'
-
     cy.gui_createCustomer(fakeContact)
-    cy.contains(contactSelector, fakeContact.name)
+    cy.contains('new-contact-page-side-menu div', fakeContact.name)
       .should('be.visible')
 
     cy.gui_readCustomer(fakeContact)
 
     const updatedContactName = `Atualizado ${fakeContact.name}`
     cy.gui_updateCustomer(updatedContactName)
-    cy.contains(contactSelector, updatedContactName)
+    cy.contains('new-contact-page-side-menu div', updatedContactName)
       .should('be.visible')
 
     cy.gui_deleteCustomer()
