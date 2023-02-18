@@ -1,8 +1,8 @@
 describe('Login', () => {
-  it('Logar e confirmar login', () => {
+  it('ao fazer o login o avatar do usuário é exibido', () => {
     cy.login()
-    cy.wait(1000)
-    cy.contains('Paulo Victor').should('be.visible')
+
+    cy.get('horizontal-menu img[src$="avatar_default.jpg"]', { timeout: 10000 })
+      .should('be.visible')
   })
 })
-
