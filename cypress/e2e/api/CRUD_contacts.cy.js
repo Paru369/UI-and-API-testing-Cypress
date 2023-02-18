@@ -22,8 +22,7 @@ describe('CRUD Contacts', () => {
         .its('status')
         .should('be.equal', 200)
       cy.get('@readContact')
-        .its('body.value')
-        .its('length')
+        .its('body.value.length')
         .should('be.at.least', 1)
     })
 
